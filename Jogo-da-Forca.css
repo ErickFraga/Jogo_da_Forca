@@ -2,18 +2,35 @@ div{
 
 }
 
+c{
+    background-color: #34f;
+    width: 35px;
+    height: 35px;
+    
+}
+
+.plavrachave{
+    position: absolute;
+    left: 50%;
+  margin-left: -1600px; /* A metade de sua largura. */
+  
+}
+
 .tecla{
     width: 35px;
     height: 35px;
 }
 
-#titulo {
-    text-align: center;
-}
-
 #hud { 
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
     background-color: #777;
     height: 300px;
+}
+
+#titulo {
+    text-align: center;
 }
 
 #teclado {
