@@ -2,17 +2,25 @@ div{
 
 }
 
-c{
-    background-color: #34f;
-    width: 35px;
-    height: 35px;
+cor{
+    background-color: rgba(25, 0, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
     
 }
 
+char{
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+}
+
+.key{
+   size: 35px;
+}
 .plavrachave{
-    position: absolute;
-    left: 50%;
-  margin-left: -1600px; /* A metade de sua largura. */
+   
   
 }
 
@@ -22,7 +30,7 @@ c{
 }
 
 #hud { 
-    position: relative;
+
     width: 100%;
     max-width: 1800px;
     background-color: #777;

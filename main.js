@@ -12,30 +12,35 @@ var rand = Math.floor(Math.random() * Banco_de_palavras.length);
 palavra_secreta = Banco_de_palavras[rand].toUpperCase().split("");
 
 for(i=0; i<palavra_secreta.length; i++){
-    palavrachave.innerHTML += "<c id='ltr" + i + "'>" + palavra_secreta[i] + "</c>";
+    var escondido = "style='visibility:hidden;'";
+    palavrachave.innerHTML += "<cor class='key'><char " + escondido + " id='ltr" + i + "'>" + palavra_secreta[i] + "</char><cor";
 }
-
-/*for(i = 0; i < palavra_secreta.length; i++){
-    letrachave.innerHTML += "<c id='ltr" + i + "></c>";
-}*/
 
 //Gerador do Teclado
 letra = new Array('Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M');
 
     for(i = 0; i < letra.length; i++){
         var lString = "Chute('" + letra[i] + "')";
-        teclado.innerHTML += "<button class='tecla' onclick=" + lString + ">" + letra[i] + "</button>";
+        var idtecla = "id='" + letra[i] + "'";
+        teclado.innerHTML += "<button class='tecla' " + idtecla + " onclick=" + lString + ">" + letra[i] + "</button>";
     }
 
 };
 
-function Chute(lrt){
+function Chute(ltr){
     for(var j = 0; j < palavra_secreta.length; j++){
-        if(lrt == palavra_secreta[j]){
-            document.getElementById("palavrachave").innerHTML += "<c>" + palavra_secreta[j] + "</c>"
+        if(ltr == palavra_secreta[j]){
+            var idltr = "ltr" + j;
+            document.getElementById(idltr).style.visibility = "visible";
+
+            document.getElementById(ltr).style.backgroundColor = "green";
+            
+            break;
+            //document.getElementById("palavrachave").innerHTML += "<c>" + palavra_secreta[j] + "</c>"
+        }else{
+            document.getElementById(ltr).style.backgroundColor = "red";
         }
     }
 
     
 }
-
