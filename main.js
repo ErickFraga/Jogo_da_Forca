@@ -26,21 +26,22 @@ letra = new Array('Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D
     }
 
 };
-
+var cont = 0;
 function Chute(ltr){
     for(var j = 0; j < palavra_secreta.length; j++){
         if(ltr == palavra_secreta[j]){
             var idltr = "ltr" + j;
             document.getElementById(idltr).style.visibility = "visible";
-
             document.getElementById(ltr).style.backgroundColor = "green";
             
-            break;
+            
+             cont += 1;
+            
             //document.getElementById("palavrachave").innerHTML += "<c>" + palavra_secreta[j] + "</c>"
-        }else{
+        }else if(cont == 0){
             document.getElementById(ltr).style.backgroundColor = "red";
         }
     }
 
-    
+   cont = 0; 
 }
