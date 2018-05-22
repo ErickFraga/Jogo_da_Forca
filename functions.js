@@ -2,6 +2,7 @@
 function Perdeu(){
     document.getElementById("resultado").innerHTML = "<div id='lose'>VOCE PERDEU!</div>";
     fim_de_jogo = true;
+    document.getElementById("again").innerHTML = "<button onclick='init()'>Novo Jogo</button>";
     for(i=0; i<palavra_secreta.length; i++){
         document.getElementById("ltr" + i).style.visibility = "visible";
     }
@@ -9,11 +10,16 @@ function Perdeu(){
 
 
 function Ganhou(){
-    document.getElementById("resultado").innerHTML = "<div id='win'>VOCE GANHOU!</div>"
+    document.getElementById("resultado").innerHTML = "<div id='win'>VOCE GANHOU!</div>";
+    
+    document.getElementById("again").innerHTML = "<button onclick='window.location.reload()'>Novo Jogo</button>";
     
     fim_de_jogo = true;
 }
 
+function Again(){
+    history.go(0);
+}
 
 function Chute(ltr){
     //Verifica se o jogo acabou "Se o Jogo Não tiver acabado" (linha: 45-55).            
@@ -42,6 +48,7 @@ function Chute(ltr){
     };
     valid = false;
     document.getElementById("falhas").innerHTML = erros;
+    document.getElementById(ltr).setAttribute('onclick','chute("")');
 };
 
 
