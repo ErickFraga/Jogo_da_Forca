@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  style="width: 100%; height: 100%;">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +9,14 @@
     <link rel="stylesheet" type="text/css" media="screen" href="Jogo-da-Forca.css" />
 </head>
 <body>
-    <div>
+    <div id="principal">
         <div id="titulo">JOGO DA FORCA</div>
         <!--Exibir Erros e acertos do Usuario-->
         <div id="hud">
+            <div id = "placar">Letras Erradas : <f id="falhas"></f></div>
+            <div id="resultado"></div>
             
-            <div id="palavrachave"></div>
+            <div id = "palavrachave"></div>
             
         </div>
         <br>
@@ -23,7 +25,5 @@
             
         </div>
     </div>
-    <!--<script src="main.js"></script>-->
-    <script src="Jogo-da-Forca.js"></script>
 </body>
 </html>

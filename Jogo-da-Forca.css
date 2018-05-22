@@ -1,51 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 div{
 
 }
 
+body{
+    background: fixed;
+    background-size: cover;
+}
+
 cor{
+    position: relative;
     background-color: rgba(25, 0, 255, 0.3);
-    width: 50px;
-    height: 50px;
     border: 1px solid black;
-    
+    background-size: cover;
 }
 
 char{
-    width: 50px;
-    height: 50px;
     font-size: 35px;
 }
 
 .key{
-   size: 35px;
 }
-.plavrachave{
-   
-  
+
+#resultado{
+    position: relative;
+    top:50px;
+}
+
+#palavrachave{
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    height: 80px;
+    top:50px;
+}
+
+#principlal{
 }
 
 .tecla{
-    width: 35px;
-    height: 35px;
+    font-family: 'Press Start 2P', 'cursive', 'Arvo', serif;
+    font-size: 32px;
+    width: 10%;
+    height: 60px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-radius: 3px;
 }
 
 #hud { 
-
-    width: 100%;
-    max-width: 1800px;
+    position: relative;
+    background-size: cover;
     background-color: #777;
-    height: 300px;
+    height: 280px;
 }
 
 #titulo {
     text-align: center;
+    font-family: 'Press Start 2P', 'cursive', 'Arvo', serif;
+    height: 30px;
 }
 
 #teclado {
+    font-family: 'Press Start 2P', 'cursive', 'Arvo', serif;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     background-color: #333;
-    width: 350px;
+    width: 80%;
+}
 
+#lose{
+    font-family: 'Press Start 2P', 'cursive', 'Arvo', serif;
+    text-align: center;
+    font-size: 32px;
+    color: red;
+}
+
+#win{
+    font-family: 'Press Start 2P', 'cursive', 'Arvo', serif;
+    text-align: center;
+    font-size: 32px;
+    color: green;
+}
+
+#placar{
+    position: relative;
+    width: max-content;
+    font-family: 'Press Start 2P', 'cursive', 'Arvo', serif;
+    font-size: 24px;
+    top:20px;
+    left: 15px;
+}
+
+#falhas{
+    color: red;
 }
