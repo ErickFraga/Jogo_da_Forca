@@ -1,6 +1,7 @@
 var Letras;
 var palavra_secreta;
 var Banco_de_palavras;
+alert("Se estiver em um disitivo telemovel, ative o modo rotação automatica.");
 window.onload = function init() {  //chama a funcão quando a janela e carregada(linha: 4 - 28)
 var teclado = document.getElementById("teclado");
 var palavrachave = document.getElementById("palavrachave");
