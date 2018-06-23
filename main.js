@@ -40,7 +40,8 @@ window.onload = function init() {  //chama a funcão quando a janela e carregada
 
     for(i=0; i<palavra_secreta.length; i++){ //Exibe um bloco vazio para cada letra da palavra secreta
         var escondido = "style='visibility:hidden;'";
-        palavrachave.innerHTML += "<cor class='key'><char " + escondido + " id='ltr" + i + "'>" + palavra_secreta[i] + "</char><cor";
+        palavrachave.innerHTML += "<div id='cor' class='group key'><div class= 'group char' " + escondido + " id='ltr" + i + "'>" + palavra_secreta[i] + "</char><cor";
+       // document.getElementById("ltr"+i).style = "justify content"
     }
 
     //Gerador do Teclado
@@ -51,8 +52,8 @@ window.onload = function init() {  //chama a funcão quando a janela e carregada
             var idtecla = "id='" + letras[i] + "'";
             teclado.innerHTML += "<button class='tecla' " + idtecla + " onclick=" + lString + ">" + letras[i] + "</button>";
         }
-
 };
+
 
 var fim_de_jogo = false;    //Confirma se o jogo acabou ou não (linhas 32, 37, 45).
 var valid = false;   //Serve para validar se não ouveram acertos na iteração (linhas 53, 58, 67).
